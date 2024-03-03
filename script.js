@@ -13,91 +13,161 @@ let isCartShowing = false;
 const products = [
   {
     id: 1,
-    name: "Vanilla Cupcakes (6 Pack)",
-    price: 12.99,
-    category: "Cupcake",
+    name: "Haldiram's Sev Bhujia",
+    productImage: "images/product-img-1.jpg",
+    category: "Snacks & Munchies",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 18
   },
   {
     id: 2,
-    name: "French Macaron",
-    price: 3.99,
-    category: "Macaron",
+    name: "NutriChoice Digestive",
+    productImage: "images/product-img-2.jpg",
+    category: "Bakery & Biscuits",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 24
   },
   {
     id: 3,
-    name: "Pumpkin Cupcake",
-    price: 3.99,
-    category: "Cupcake",
+    name: "Cadbury Chocolate",
+    productImage: "images/product-img-3.jpg",
+    category: "Bakery & Biscuits",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 18
   },
   {
     id: 4,
-    name: "Chocolate Cupcake",
-    price: 5.99,
-    category: "Cupcake",
+    name: "Onion Flavour Potato",
+    productImage: "images/product-img-4.jpg",
+    category: "Snacks & Munchies",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 24
   },
   {
     id: 5,
-    name: "Chocolate Pretzels (4 Pack)",
-    price: 10.99,
-    category: "Pretzel",
+    name: "Salted Instant Popcorn",
+    productImage: "images/product-img-5.jpg",
+    category: "Instant Food",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 18
   },
   {
     id: 6,
-    name: "Strawberry Ice Cream",
-    price: 2.99,
-    category: "Ice Cream",
+    name: "Blueberry Greek Yogurt",
+    productImage: "images/product-img-6.jpg",
+    category: "Dairy, Bread & Eggs",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 18
   },
   {
     id: 7,
-    name: "Chocolate Macarons (4 Pack)",
-    price: 9.99,
-    category: "Macaron",
+    name: "Britannia Cheese Slices",
+    productImage: "images/product-img-7.jpg",
+    category: "Dairy, Bread & Eggs<",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 30
   },
   {
     id: 8,
-    name: "Strawberry Pretzel",
-    price: 4.99,
-    category: "Pretzel",
+    name: "Kellogg's Cereals",
+    productImage: "images/product-img-8.jpg",
+    category: "Instant Food",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 48
   },
   {
     id: 9,
-    name: "Butter Pecan Ice Cream",
-    price: 2.99,
-    category: "Ice Cream",
+    name: "Slurrp Millet Chocolate",
+    productImage: "images/product-img-9.jpg",
+    category: "Snacks & Munchies",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 25
   },
   {
     id: 10,
-    name: "Rocky Road Ice Cream",
-    price: 2.99,
-    category: "Ice Cream",
+    name: "Amul Butter - 500 g",
+    productImage: "images/product-img-10.jpg",
+    category: "Dairy, Bread & Eggs",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 36
   },
   {
     id: 11,
-    name: "Vanilla Macarons (5 Pack)",
-    price: 11.99,
-    category: "Macaron",
+    name: "Roast Ground Coffee",
+    productImage: "images/product-img-11.jpg",
+    category: "Tea, Coffee & Drinks",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 24
   },
   {
     id: 12,
-    name: "Lemon Cupcakes (4 Pack)",
-    price: 12.99,
-    category: "Cupcake",
+    name: "Crushed Tomatoes",
+    productImage: "images/product-img-12.jpg",
+    category: "Fruits & Vegetables",
+    starImage: "images/star_full_icon.png",
+    halfStarImage: "images/star_half_icon.png",
+    starFigure: "4.5(149)",
+    price: 13
   },
 ];
 
-products.forEach(({ name, id, price, category }) => {
-  dessertCards.innerHTML += `
+products.forEach(
+  ({
+    name,
+    id,
+    price,
+    category,
+    productImage,
+    starImage,
+    halfStarImage,
+    starFigure,
+  }) => {
+    dessertCards.innerHTML += `
       <div class="dessert-card">
-        <h2>${name}</h2>
-        <p class="dessert-price">$${price}</p>
-        <p class="product-category">Category: ${category}</p>
-        <button 
-          id="${id}" 
-          class="btn add-to-cart-btn">Add to cart
+                    <img src="${productImage}" alt="product1" class="product-img">
+                    <span class="snack-span">${category}</span>
+                    <p class="pro-2p">${name}</p>
+                    <div class="stars">
+                        <img src="${starImage}" alt="star_full" class="star">
+                        <img src="${starImage}" alt="star_full" class="star">
+                        <img src="${starImage}" alt="star_full" class="star">
+                        <img src="${starImage}" alt="star_full" class="star">
+                        <img src="${halfStarImage}" alt="star_half" class="star">
+                        <span>${starFigure}</span>
+                    </div>
+                    <div class="pro_price">
+                        <span>$${price}</span>
+                        <button 
+          id="${id}" type ="button"
+          class="btn add-to-cart-btn">+ Add
         </button>
+                    </div>
       </div>
     `;
-});
+  }
+);
 
 class ShoppingCart {
   constructor() {
