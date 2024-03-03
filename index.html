@@ -6,15 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>freeCodeCamp Shopping Cart</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="https://kit.fontawesome.com/2afd482697.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
-      <h1 class="title">Desserts Page</h1>
+        <div class="header1">
+            <div class="logo">
+                <img src="images/cart_icon.png" alt="cart logo" class="cart-logo">
+                <h1>FreshCart</h1>
+            </div>
+            <ul class="tags">
+              <li><i class="fa-solid fa-house nav-item" class="sub-tags tag3"></i></li>
+              <li><i class="fa-solid fa-phone nav-item" class="sub-tags tag3"></i></li>
+              <li><div class="cart btn" id = "cart-btn"><i class="fa-solid fa-cart-shopping nav-item"  class="sub-tags tag3" id="show-hide-cart"></i></a><p id="count">0</p></div></li>
+            </ul>
+            </div>
+
+            <hr/>
+
+            <div class="banner">
+              <div class="image-div">
+                  <div class=" mySlides fade">
+                      <img src="images/veggies.png" alt="veggies background" class="veggies-image slide1">
+                  </div>
+                  
+                    <div class="mySlides fade">
+                      <img src="images/slide-1.jpg" alt="second slide" class="veggies-image slide2">
+                  </div>
+                
+                  <div class="m-dot">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                  </div>
+              </div>
+              <div class="banner-text">
+                  <span class="ship">Free Shipping - orders over $100</span>
+                  <h1>Free Shipping on <br>orders over<span class="banner-price">$100</span></h1>
+                  <p>Free Shipping to First-Time Customers Only, After promotions and<br> discounts are applied.</p>
+                  <button class="banner-button">Shop Now</button>
+              </div>
+          </div>
     </header>
     <main>
+      <!--
       <button id="cart-btn" type="button" class="btn">
         <span id="show-hide-cart">Show</span> Cart
       </button>
+      -->
+
+      <div class="f-category">
+        <h2 class="Featured">Featured Categories</h2>
+        <div class="slide1">
+            <div class="slide1-1 m-0">
+                <img src="images/baby-care.jpg" alt="baby-care">
+                <p>Baby Care</p>
+            </div>
+            <div class="slide1-1">
+                <img src="images/coffee-drinks.jpg" alt="coffee-drinks">
+                <p>Tea, Coffee and Drinks</p>
+            </div>
+            <div class="slide1-1">
+                <img src="images/meat-fish.jpg" alt="meat-fish">
+                <p>Chicken, Meat and Fish</p>
+            </div>
+            <div class="slide1-1">
+                <img src="images/rice-dal.jpg" alt="rice-dal">
+                <p>Atta, Rice and Dal</p>
+            </div>
+        </div>
+
+        <div class="g-banners">
+          <div class="banners1 m-0">
+              <img src="images/grocery-banner.png" alt="grocery banner">
+          </div>
+          <div class="g-banner-text">
+              <h2>Fruits & Vegetables</h2>
+              <p>Get Upto <span>30%</span> Off</p>
+              <button class="banner-button" type="button">Shop Now</button>
+          </div>
+          <div class="banners1">
+              <img src="images/grocery-banner-2.jpg" alt="grocery banner">
+          </div>
+          <div class="g-banner-text2">
+              <h2>Freshly Baked Buns</h2>
+              <p>Get Upto <span>25%</span> Off</p>
+              <button class="banner-button" type="button">Shop Now</button>
+          </div>
+      </div>
+  </div>
+
       <div id="cart-container">
         <button class="btn" id="clear-cart-btn">Clear Cart</button>
         <div id="products-container"></div>
@@ -26,5 +106,6 @@
       <div id="dessert-card-container"></div>
     </main>
     <script src="./script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
