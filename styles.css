@@ -279,7 +279,6 @@ main {
 
 #dessert-card-container {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -409,18 +408,4 @@ main {
 
 .product-category {
   margin: 10px 0;
-}
-
-@media (min-width: 768px) {
-  #dessert-card-container {
-    flex-direction: row;
-  }
-
-  .dessert-card {
-    flex: 1 0 21%;
-  }
-
-  #cart-container {
-    width: 300px;
-  }
 }
